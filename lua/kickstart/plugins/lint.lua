@@ -7,6 +7,12 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        javascript = { 'eslint_d' },
+        typescript = { 'eslint_d' },
+        dotenv = { 'dotenv_linter' },
+        dockerfile = { 'hadolint' },
+        json = { 'jsonlint' },
+        golang = { 'golangcilint' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
@@ -17,7 +23,7 @@ return {
       -- However, note that this will enable a set of default linters,
       -- which will cause errors unless these tools are available:
       -- {
-      --   clojure = { "clj-kondo" },
+      --   clojure = { "" },
       --   dockerfile = { "hadolint" },
       --   inko = { "inko" },
       --   janet = { "janet" },
